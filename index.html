@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor Challenge</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    .Container {
+      font-family: 'Hanken Grotesk', sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      background-color: white;
+      width: fit-content;
+      border-radius: 30px;
+    }
+    .rightContainer {
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:start;
+      width: 230px;
+      background: white;
+      height: 400px;
+      padding: 50px 50px;
+      border-radius:25px;
+
+    }
+    .leftContainer {
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      align-items:center;
+      width: 230px;
+      background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)) ;
+      height: 400px;
+      padding: 50px 50px;
+      border-radius:25px;
+    }
+    .Feedback,.Description {
+      text-align: center;
+    }
+    body {
+      background-color:lightgray;
+    }
+    .reactionContainer,.memoryContainer,.verbalContainer,.visualContainer {
+      display:flex;
+      justify-content: space-between;
+      width: 200px;
+      border-radius: 10px;
+    }
+   .Result {
+    font-size:1.5em; /*1em = 16px*/
+    color: white;
+    font-weight: 400;
+   }
+   .scoreContainer {
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-radius: 100%;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+    
+   }
+   .Score {
+    font-size: 5em;
+    color: white;
+   }
+   .outOf {
+    font-size: 1em;
+    color: white;
+    font-weight: 100;
+   }
+   .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   }
+   h1, p, h2 {
+    all: unset;
+   }
+   .Feedback {
+    font-size: 2em;
+    font-weight: 500;
+    color:white;
+    width: fit-content;
+    height: fit-content;
+   }
+   .Description {
+    font-size: 1em;
+    color:lightgray;
+   }
+   .continueBtn {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background:hsl(224, 30%, 27%);
+    color:white;
+    border-radius: 60px;
+    padding: 15px;
+    width: 100%;
+    border:none;
+    font-size: 1em;
+    
+   }
+   .Reaction {
+    color:hsl(0, 100%, 67%);
+   }
+   .reactionScore {
+    
+   }
+   
+   .Memory {
+    color: hsl(39, 100%, 56%);
+   }
+   .Summary {
+    font-size: 1.5em;
+    font-weight: 600;
+
+  }
+   .reactionContainer {
+    background-color:hsl(0, 100%, 67%,.1);
+    padding:15px;
+   }
+
+   .memoryContainer {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    padding: 15px;
+   }
+   .verbalContainer {
+    background-color: hsl(166, 100%, 37%, .1);
+    padding:15px;
+   }
+   .visualContainer {
+    background-color:hsl(234, 85%, 45%,.1);
+    padding:15px;
+   }
+
+   .Verbal {
+    color:hsl(166, 100%, 37%);
+
+   }
+   .Visual {
+    color:hsl(234, 85%, 45%);
+   }
+   span {
+    color:gray;
+   }
+   .reactionScore,.memoryScore,.visualScore,.verbalScore {
+    font-weight: 600;
+   }
+
+   .imgContainer {
+    display: flex;
+    gap: 5px;
+   }
+
+   @media (max-width:450px) {
+      .Container {
+        flex-direction: column;
+      }
+
+      .leftContainer {
+        justify-content: space-evenly;
+        gap: 10px;
+        height: fit-content;
+        border-radius: 0px 0px 50px 50px;
+      }
+   }
+  
+  </style>
+</head>
+<body>
+<div class="Container">
+  <div class="leftContainer">
+    
+    <h1 class="Result">Your Result</h1>
+
+    <div class="scoreContainer"> 
+      <h1 class="Score">76</h1>
+      <h2 class="outOf">of 100</h2>
+    </div>
+
+    <div class="descriptionContainer">
+      <h1 class="Feedback">Great</h1> 
+      <p class="Description">You scored higher than 65% of the people who have taken these test.</p>
+    </div>
+  </div>
+
+ <div class="rightContainer">
+  <h1 class="Summary">Summary</h1>
+
+  <div class="reactionContainer">
+    <div class="imgContainer">
+      <img src="./assets/images/icon-reaction.svg" alt="reaction">
+    <h2 class="Reaction">Reaction</h2>
+  </div>
+    <h2 class="reactionScore">80 <span>/ 100</span> </h2>
+  </div>
+
+  <div class="memoryContainer">
+    <div class="imgContainer">
+      <img src="./assets/images/icon-memory.svg" alt="Memory">
+      <h2 class="Memory">Memory</h2>
+    </div>
+    <h2 class="memoryScore">92 <span>/ 100</span></h2>
+</div>
+
+  <div class="verbalContainer">
+    <div class="imgContainer">
+      <img src="./assets/images/icon-verbal.svg" alt="">
+  <h2 class="Verbal">Verbal</h2>
+    </div>
+  <h2 class="verbalScore">61  <span>/ 100</span> </h2>
+</div>
+
+<div class="visualContainer"> 
+  <div class="imgContainer">
+    <img src="./assets/images/icon-visual.svg" alt="">
+  <h2 class="Visual">Visual</h2>
+  </div>
+  <h2 class="visualScore">72 <span>/ 100</span></h2>
+</div>
+
+<button class="continueBtn" type="button">Continue</button>
+
+</div>
+</div>
+</body>
+</html>
